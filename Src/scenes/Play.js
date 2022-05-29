@@ -12,7 +12,7 @@ class Play extends Phaser.Scene {
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
         this.load.spritesheet('shipanimation', './assets/shipanimation.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 2});
         //load audio
-        this.load.audio('music', './assets/upbeat-classic-arcade-video-game.wav');
+        
     }
 
     create() {
@@ -84,8 +84,7 @@ class Play extends Phaser.Scene {
         }, null, this);
 
         //music
-        this.globalMusicVolume = 0.15;
-        this.music.setGlobalConfig({loop: true, volume: this.globalMusicVolume});
+        this.music.setGlobalConfig({loop: true, volume: 0.15});
         this.music.play();
     }
 
